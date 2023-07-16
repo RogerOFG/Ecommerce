@@ -1,0 +1,316 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    outline: none;
+}
+
+/*|--- -- --------- -- ---|*/
+/*|--- -- Variables -- ---|*/
+/*|--- -- --------- -- ---|*/
+
+:root{
+    --clr-main: #F8F8F8;
+    --clr-white: #FFFFFF;
+}
+
+body{
+    background-color: var(--clr-main);
+}
+
+main{
+    position: relative;
+    overflow: hidden;
+}
+
+/*|--- -- CIRCULO SUPERIOR E INFERIOR -- ---*/
+main::before{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    top: -40px;
+    left: -40px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #dac385 0%, #cda434 100%);
+}
+
+main::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background-color: #000;
+    position: absolute;
+    bottom: -40px;
+    right: -40px;
+    border-radius: 50%;
+    background: linear-gradient(0deg, #dac385 0%, #cda434 100%);
+}
+/*|--- -- FIN: CIRCULO SUPERIOR E INFERIOR -- ---*/
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.login,
+.design{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+    border-radius: 15px;
+}
+
+.login{
+    min-width: 400px;
+    height: 450px;
+    transform: translateX(20px);
+    background-color: var(--clr-white);
+}
+
+.login-title{
+    text-align: center;
+    padding-top: 50px;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-email,
+.login-password{
+    position: relative;
+    margin: 0;
+    margin-top: 40px;
+}
+
+.login-email input,
+.login-password input{
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    padding-left: 50px;
+    border-radius: 8px;
+    height: 40px;
+    width: 300px;
+    font-size: 15px;
+}
+
+.login-email .bi,
+.login-password .bi{
+    position: absolute;
+    top: 0;bottom: 0;left: 0;
+    margin: auto;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a1a6b8;
+    font-style: normal;
+    padding-left: 15px;
+}
+
+.bi::after{
+    content: "|";
+    padding-left: 10px;
+}
+
+.login-button input{
+    border: none;
+    background-color: #dac385;
+    color: #FFFFFF;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 20px;
+    margin-top: 20px;
+    transition: .3s ease-in-out;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.login-button input:hover{
+    background-color: #cda434;
+}
+
+.sep{
+    margin: 10px 0;
+    position: relative;
+    color: #00000075;
+}
+
+.sep span::after{
+    content: "";
+    position: absolute;
+    border-top: 1px solid;
+    top: 13px;
+    right: -33px;
+    width: 30px;
+    height: 1px;
+}
+.sep span::before{
+    content: "";
+    width: 30px;
+    height: 1px;
+    border-top: 1px solid;
+    position: absolute;
+    top: 13px;
+    left: -33px;
+}
+
+.register-page{
+    font-size: 15px;
+}
+
+.register-page strong{
+    cursor: pointer;
+}
+
+.design{
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(235deg, 
+            #BABC4A 0%, 
+            #cda434 100%), 
+        linear-gradient(235deg, 
+            #b49132 0%, 
+            #282534 100%), 
+        linear-gradient(235deg, 
+            #cda434 0%, 
+            #000000 100%), 
+        radial-gradient(120% 185% at 25% -25%, 
+            #EEEEEE 0%, 
+            #EEEEEE 40%, 
+            #7971EA calc(40% + 1px), 
+            #7971EA 50%, 
+            #393E46 calc(50% + 1px), 
+            #393E46 70%, 
+            #222831 calc(70% + 1px), 
+            #222831 100%), 
+        radial-gradient(70% 140% at 90% 10%, 
+            #F5F5C6 0%, 
+            #F5F5C6 30%, 
+            #ebb215 calc(30% + 1px), 
+            #e9c461 60%, 
+            #dbb344 calc(60% + 1px), 
+            #e5d199 80%, 
+            #27253D calc(80% + 1px), 
+            #27253D 100%
+    );
+    background-blend-mode: overlay, lighten, overlay, color-burn, normal;
+}
+
+/*|--- -- -------- -- ---|*/
+/*|--- -- REGISTER -- ---|*/
+/*|--- -- -------- -- ---|*/
+
+.register{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 16%);
+    border-radius: 15px;
+}
+
+.register{
+    min-width: 400px;
+    height: 690px;
+    transform: translateX(-40px);
+    background-color: var(--clr-white);
+}
+
+.ocultarL{
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+    transform: translateX(600px);
+    z-index: -1;
+}
+
+.ocultarR{
+    opacity: 0;
+    transition: opacity 0.5s ease-out, transform 1s ease-out;
+    transform: translateX(-600px);
+    z-index: -1;
+}
+
+.quest{
+    position: absolute;
+    top: 0;
+    right: 8px;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    color: grey;
+}
+
+.quest .questMsj{
+    background-color: #fff;
+    width: 272px;
+    height: auto;
+    box-shadow: 3px 0px 10px #00000025;
+    padding: 10px 20px;
+    border-radius: 14px;
+    position: absolute;
+    top: 40px;
+    right: -7px;
+    z-index: 10;
+    display: none;
+}
+
+.quest:hover .questMsj{
+    display: block;
+}
+
+@media screen and (max-width: 900px) {
+    .login{
+        width: 400px;
+        transform: translateX(0);
+        position: absolute;
+        top: 0;bottom: 0; left: 0;right: 0;
+        margin: auto;
+        z-index: 1;
+    }
+    
+    .register{
+        width: 400px;
+        transform: translateX(0);
+        position: absolute;
+        top: 0;left: 0;right: 0;bottom: 0;
+        margin: auto;
+        z-index: 1;
+    }
+
+    .ocultarL{
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        z-index: 1;
+    }
+
+    .ocultarR{
+        opacity: 0;
+        transition: opacity 0.5s ease-out;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .login,
+    .register{
+        min-width: inherit;
+        max-width: 100%;
+    }
+
+    .login-email,
+    .login-password {
+        width: 90%;
+    }
+
+    .login-email input,
+    .login-password input{
+        width: 100%;
+    }
+}

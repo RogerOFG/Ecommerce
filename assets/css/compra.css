@@ -1,0 +1,244 @@
+.contenedor-ancho{
+    margin-bottom: 150px;
+}
+
+.cart-content{
+    border-radius: 15px;
+    max-width: 1020px;
+    padding: 50px;
+    margin: 0 auto;
+}
+
+.box-ubi{
+    border-radius: 5px;
+    width: 100;
+    height: auto;
+    display: flex;
+    padding-right: 20px;
+    background-color: #dddddd;
+}
+
+.box-icono,
+.box-direc,
+.box-modi{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.box-ubi .box-icono{
+    min-width: 80px;
+    height: 80px;
+}
+
+.box-icono .bi{
+    color: #cda434;
+    font-size: 24px;
+    border-radius: 50px;
+    padding: 10px 13px;
+    background-color: #ffffff;
+}
+
+.box-ubi .box-direc{
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 20px;
+}
+
+.box-direc span:nth-child(1){
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box-direc span:nth-child(3){
+    font-size: 15px;
+    font-style: italic;
+}
+
+.box-ubi .box-modi{
+    min-width: 170px;
+}
+
+.box-modi a{
+    color: #cda434;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.box-producto{
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
+    background-color: #fafafa;
+    border-radius: 8px;
+}
+
+.box-envio{
+    padding: 30px 40px;
+    border-bottom: 1px solid #00000025;
+    display: flex;
+    justify-content: space-between;
+}
+
+.box-envio span:nth-child(1){
+    color: #cda434;
+}
+
+.box-info{
+    padding: 30px 40px;
+    display: flex;
+}
+
+.box-info .picture{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-size: cover; 
+    background-position: center;
+}
+
+.box-data{
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box-data span{
+    font-size: 15px;
+}
+
+.box-data span:nth-child(1){
+    font-weight: bold;
+}
+
+.box-data span:nth-child(2){
+    padding-bottom: 10px;
+}
+
+.box-data span:nth-child(3){
+    font-style: italic;
+}
+
+footer{
+    box-shadow: 0 1px 10px 0 rgba(0,0,0,.25);
+    border-radius: 10px 10px 0 0;
+    max-width: 1100px;
+    height: 150px;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;left: 0;right: 0;
+    margin: 0 auto;
+    padding: 10px 40px;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-content{
+    width: 600px;
+}
+
+.footer-title{
+    border-bottom: 1px solid #00000025;
+    padding-bottom: 10px;
+    color: #cda434;
+}
+
+footer div:nth-child(2),
+footer div:nth-child(3),
+footer .total{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .total{
+    padding-top: 10px;
+    border-top: 1px solid #00000025;
+}
+
+.footer-btn .button{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: 30px;
+}
+
+.footer-btn a{
+    color: #fff;
+    background-color: #cda434;
+    padding: 15px 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+@media screen and (max-width: 510px) {
+    .contenedor-ancho{
+        margin-bottom: 250px;
+    }
+
+    footer{
+        flex-direction: column;
+        height: 250px;
+    }
+
+    .footer-content{
+        max-width: 100%;
+    }
+
+    .footer-btn .button{
+        display: flex;
+        justify-content: center;
+        padding-bottom: 20px;
+    }
+
+    .box-ubi{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .box-direc{
+        padding-bottom: 10px;
+    }
+
+    .box-modi{
+        padding-bottom: 30px;
+    }
+
+    .box-respon{
+        padding: 10px;
+        margin: 0 auto;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .box-info{
+        flex-direction: column;
+    }
+    
+    .box-info .picture{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        background-size: cover; 
+        background-position: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    
+    .box-data{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cart-content{
+        max-width: 100%;
+        padding: 50px 10px;
+    }
+    
+}

@@ -1,0 +1,128 @@
+.contenedor h2{
+    margin-left: 40px;
+}
+
+.box-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-compra{
+    box-shadow: 3px 0 10px #00000025;
+    width: 90%;
+    height: auto;
+    padding: 20px 20px 20px 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: .2s ease-in;
+    background-color: #fff;
+}
+
+.box-compra:hover{
+    background-color: #ededed;
+}
+
+.box-fecha{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #00000025;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.box-img{
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.box-content{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.box-info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 20px;
+    width: 190px;
+}
+
+.box-info span:nth-child(2){
+    font-size: 15px;
+    font-style: italic;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.box-data{
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-data span:nth-child(1){
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.box-btn{
+    display: flex;
+    align-items: center;
+}
+
+.box-btn a{
+    padding: 10px 30px;
+    border: none;
+    border-radius: 12px;
+    background-color: #cda434;
+    color: #fff;
+    text-align: center;
+    transition: .2s ease-in-out;
+}
+
+.box-btn a:hover{
+    background-color: #cda434c7;
+}
+
+@media screen and (max-width: 680px) {
+    .contenedor h2{
+        margin-left: 0px;
+    }
+
+    .box-fecha{
+        text-align: center;
+    }
+
+    .box-content{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .box-info{
+        margin-left: 0;
+        margin-top: 15px;
+        width: 100%;
+    }
+
+    .box-info span:nth-child(2){
+        padding-bottom: 15px;
+        border-bottom: 1px solid #00000025;
+    }
+    
+    .box-data{
+        margin: 15px 0;
+    }
+}
